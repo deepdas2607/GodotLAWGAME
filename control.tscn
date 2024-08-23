@@ -55,10 +55,10 @@ vertical_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 398.16
-offset_top = 355.295
-offset_right = 2596.16
-offset_bottom = 867.295
+offset_left = 379.0
+offset_top = 354.0
+offset_right = 2577.0
+offset_bottom = 866.0
 scale = Vector2(0.18, 0.18)
 theme_override_constants/separation = 50
 alignment = 1
