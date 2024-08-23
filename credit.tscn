@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://mbvep1ggxygv"]
+
+[ext_resource type="Texture2D" uid="uid://cftkdtwna5pac" path="res://assets/icons/bg.jpg" id="1_8uuyd"]
+[ext_resource type="Script" path="res://credit.gd" id="1_e43a6"]
+[ext_resource type="FontFile" uid="uid://chu2s63iol7jj" path="res://assets/font/CELTG___.TTF" id="2_07mlr"]
+[ext_resource type="FontFile" uid="uid://c2ew0rso2rnhg" path="res://assets/font/LEMONMILK-RegularItalic.otf" id="3_8ft6q"]
+[ext_resource type="AudioStream" uid="uid://bk3sha7xlbg18" path="res://assets/sound/Lost-and-Found(chosic.com).mp3" id="5_t6ruy"]
+[ext_resource type="Texture2D" uid="uid://hvylulg6s2r6" path="res://assets/icons/esc.png" id="6_tuvfp"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e43a6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8uuyd")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.682353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_07mlr")
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.983159, 0.680462, 0.809478, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("3_8ft6q")
+theme_override_font_sizes/font_size = 50
+text = "VISHAL GOWDA 
+DEEPKUMAR DAS
+SIDDHI BIRJE 
+HARSHALI SINGH
+PRANAV SHIRKE
+YASH NAIK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_t6ruy")
+autoplay = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 542.0
+offset_right = -626.0
+offset_bottom = 415.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.165, 0.165)
+texture_normal = ExtResource("6_tuvfp")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

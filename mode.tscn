@@ -1,0 +1,142 @@
+[gd_scene load_steps=9 format=3 uid="uid://dnbvcmetymy77"]
+
+[ext_resource type="Texture2D" uid="uid://cftkdtwna5pac" path="res://assets/icons/bg.jpg" id="1_mpb60"]
+[ext_resource type="Script" path="res://mode.gd" id="1_p10oi"]
+[ext_resource type="FontFile" uid="uid://chu2s63iol7jj" path="res://assets/font/CELTG___.TTF" id="2_26ml6"]
+[ext_resource type="Texture2D" uid="uid://g3j7wcxo2ng" path="res://assets/icons/story mode.jpg" id="3_st4wh"]
+[ext_resource type="Texture2D" uid="uid://blge03d2mvway" path="res://assets/icons/minigame.jpg" id="4_1tlux"]
+[ext_resource type="AudioStream" uid="uid://bk3sha7xlbg18" path="res://assets/sound/Lost-and-Found(chosic.com).mp3" id="5_cig28"]
+[ext_resource type="Texture2D" uid="uid://hvylulg6s2r6" path="res://assets/icons/esc.png" id="6_6gdkk"]
+[ext_resource type="FontFile" uid="uid://c2ew0rso2rnhg" path="res://assets/font/LEMONMILK-RegularItalic.otf" id="8_ryvt2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p10oi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mpb60")
+expand_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 541.0
+offset_right = -612.0
+offset_bottom = 414.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.165, 0.165)
+texture_normal = ExtResource("6_6gdkk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TextureRect"]
+stream = ExtResource("5_cig28")
+autoplay = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -180.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.682353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_26ml6")
+theme_override_font_sizes/font_size = 50
+text = "SELECT GAME MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 102.0
+offset_top = 227.0
+offset_right = 541.0
+offset_bottom = 482.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 564.0
+offset_top = 227.0
+offset_right = 1003.0
+offset_bottom = 482.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 105.755
+offset_top = 232.0
+offset_right = 2868.75
+offset_bottom = 1000.0
+scale = Vector2(0.32, 0.32)
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("3_st4wh")
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("4_1tlux")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 407.0
+offset_right = 478.0
+offset_bottom = 475.0
+theme_override_colors/font_color = Color(0.768627, 0.996078, 0.690196, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("8_ryvt2")
+theme_override_font_sizes/font_size = 50
+text = "STORY MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 407.0
+offset_right = 936.0
+offset_bottom = 475.0
+theme_override_colors/font_color = Color(0.768627, 0.996078, 0.690196, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("8_ryvt2")
+theme_override_font_sizes/font_size = 50
+text = "MINI-GAMES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureRect/TextureButton" to="." method="_on_texture_button_pressed"]

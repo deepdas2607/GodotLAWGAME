@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwvb067pi7a5j"]
+
+[ext_resource type="Texture2D" uid="uid://cftkdtwna5pac" path="res://assets/icons/bg.jpg" id="1_3nra1"]
+[ext_resource type="Script" path="res://control.gd" id="1_tctga"]
+[ext_resource type="FontFile" uid="uid://chu2s63iol7jj" path="res://assets/font/CELTG___.TTF" id="2_hjvgl"]
+[ext_resource type="Texture2D" uid="uid://c2r703iytgm14" path="res://assets/icons/power-button.png" id="3_xsa3d"]
+[ext_resource type="Texture2D" uid="uid://ba2dbasu78p4p" path="res://assets/icons/setting.png" id="4_01sxr"]
+[ext_resource type="Texture2D" uid="uid://cddln83j3nvtj" path="res://assets/icons/right-arrow.png" id="4_78j3g"]
+[ext_resource type="Texture2D" uid="uid://cxk3816cgtths" path="res://assets/icons/find.png" id="5_bgtqe"]
+[ext_resource type="AudioStream" uid="uid://bk3sha7xlbg18" path="res://assets/sound/Lost-and-Found(chosic.com).mp3" id="8_kr0i7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tctga")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3nra1")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.682353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_hjvgl")
+theme_override_font_sizes/font_size = 50
+text = "SAMVIDHAAN SAGA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 398.16
+offset_top = 355.295
+offset_right = 2596.16
+offset_bottom = 867.295
+scale = Vector2(0.18, 0.18)
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_78j3g")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_01sxr")
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_bgtqe")
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_xsa3d")
+stretch_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_kr0i7")
+autoplay = true
+
+[connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
