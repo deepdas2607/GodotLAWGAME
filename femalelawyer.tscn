@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://btw05b2u15d3q"]
+
+[ext_resource type="Texture2D" uid="uid://blp24vhnvaowy" path="res://assets/a_full_body_image_of__1_-removebg-preview (1).png" id="1_rxfm2"]
+[ext_resource type="Texture2D" uid="uid://diwkm1o2ruo8t" path="res://assets/fem-removebg-preview.png" id="2_hwaf7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1xed"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rxfm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hwaf7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="femalelawyer" type="CharacterBody2D"]
+position = Vector2(0, -2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s1xed")
