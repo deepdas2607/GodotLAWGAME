@@ -20,6 +20,7 @@ animations = [{
 [node name="malelawyer" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(284, 290)
+position = Vector2(251, 398)
 sprite_frames = SubResource("SpriteFrames_8ume8")
-frame_progress = 0.535644
+autoplay = "default"
+frame_progress = 0.670168
