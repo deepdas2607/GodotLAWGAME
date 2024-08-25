@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://hvylulg6s2r6" path="res://assets/icons/esc.png" id="3_14ywb"]
 [ext_resource type="AudioStream" uid="uid://bk3sha7xlbg18" path="res://assets/sound/Lost-and-Found(chosic.com).mp3" id="4_qfjfx"]
 [ext_resource type="FontFile" uid="uid://chu2s63iol7jj" path="res://assets/font/CELTG___.TTF" id="5_t3eug"]
-[ext_resource type="Texture2D" uid="uid://cxmiernlm0ecl" path="res://assets/icons/1.png" id="6_r4ham"]
+[ext_resource type="Texture2D" uid="uid://cobg7v6r6qtv6" path="res://assets/icons/1.png" id="6_r4ham"]
 [ext_resource type="Texture2D" uid="uid://d1pt1dv035jlx" path="res://assets/icons/2.png" id="7_2hw3l"]
 [ext_resource type="Texture2D" uid="uid://btba0d55so7rr" path="res://assets/icons/3.png" id="8_f1oim"]
 [ext_resource type="Texture2D" uid="uid://ctd8ownrfgt35" path="res://assets/icons/4.png" id="9_w0mxg"]
