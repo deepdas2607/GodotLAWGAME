@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dq4423epaceos"]
+[gd_scene load_steps=9 format=3 uid="uid://dq4423epaceos"]
 
 [ext_resource type="Script" path="res://lvl_1.gd" id="1_3krxl"]
 [ext_resource type="Texture2D" uid="uid://bxp01v3db753b" path="res://assets/icons/bg courtroom 1.jpg" id="1_m6g6d"]
 [ext_resource type="PackedScene" uid="uid://btiyrqtws6em0" path="res://malelawyer.tscn" id="2_gwqim"]
 [ext_resource type="PackedScene" uid="uid://btw05b2u15d3q" path="res://femalelawyer.tscn" id="3_2276h"]
 [ext_resource type="Texture2D" uid="uid://bynfo2gxr3uo3" path="res://assets/icons/back.png" id="3_y4csm"]
+[ext_resource type="Texture2D" uid="uid://dm41tmikco3hq" path="res://assets/icons/judge.png" id="4_lja62"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hmsga"]
 radius = 101.796
@@ -45,6 +46,15 @@ offset_right = 532.0
 offset_bottom = 534.0
 scale = Vector2(0.125, 0.125)
 texture_normal = ExtResource("3_y4csm")
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 359.0
+offset_right = 1014.0
+offset_bottom = 640.0
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("4_lja62")
 
 [node name="malelawyer" parent="." instance=ExtResource("2_gwqim")]
 position = Vector2(-33.995, 111.64)
