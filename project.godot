@@ -15,14 +15,8 @@ run/main_scene="res://control.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
-[autoload]
-
-GameManager="*res://GameManager.gd"
-
 [display]
 
-window/size/viewport_width=1200
-window/size/viewport_height=800
 window/stretch/mode="canvas_items"
 
 [rendering]
