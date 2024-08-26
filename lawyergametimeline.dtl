@@ -1,0 +1,11 @@
+"lawyer 1": Wassup!
+"lawyer 1": What Do You Think Of Vishal??
+[text_input var="response"]
+if {response} == "Good Guy":
+	"lawyer 1": okk.. nice opinion..
+	"lawyer 1": let's proceed...
+	"lawyer 2": Do You think Vishal Fears Getting Kt ?
+	- Yes!!
+		"lawyer 2": Ofc!! Even I fear KT's..
+	- No!!
+		"lawyer 2": Damn!! Guy has guts...
