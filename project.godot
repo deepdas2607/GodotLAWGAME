@@ -35,8 +35,8 @@ glossary/default_case_sensitive=true
 variables={
 "response": ""
 }
-layout/style_list=[""]
-layout/default_style=""
+layout/style_list=["res://Style1.tres"]
+layout/default_style="res://Style1.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
