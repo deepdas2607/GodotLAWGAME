@@ -1,12 +1,156 @@
-[gd_scene load_steps=10 format=3 uid="uid://dq4423epaceos"]
+[gd_scene load_steps=17 format=3 uid="uid://dq4423epaceos"]
 
-[ext_resource type="Script" path="res://lvl_1.gd" id="1_3krxl"]
 [ext_resource type="Texture2D" uid="uid://bxp01v3db753b" path="res://assets/icons/bg courtroom 1.jpg" id="1_m6g6d"]
+[ext_resource type="Shader" path="res://pausemenu.gdshader" id="2_0y8lb"]
+[ext_resource type="Script" path="res://back.gd" id="2_7mf6p"]
 [ext_resource type="PackedScene" uid="uid://btiyrqtws6em0" path="res://malelawyer.tscn" id="2_gwqim"]
 [ext_resource type="PackedScene" uid="uid://btw05b2u15d3q" path="res://femalelawyer.tscn" id="3_2276h"]
 [ext_resource type="Texture2D" uid="uid://bynfo2gxr3uo3" path="res://assets/icons/back.png" id="3_y4csm"]
 [ext_resource type="Texture2D" uid="uid://dm41tmikco3hq" path="res://assets/icons/judge.png" id="4_lja62"]
 [ext_resource type="FontFile" uid="uid://chu2s63iol7jj" path="res://assets/font/CELTG___.TTF" id="5_ab4k1"]
+[ext_resource type="FontFile" uid="uid://bcgwslulf1ky4" path="res://assets/font/LEMONMILK-MediumItalic.otf" id="7_sp0v1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5uoim"]
+shader = ExtResource("2_0y8lb")
+shader_parameter/lod = 0.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xas86"]
+bg_color = Color(0.590662, 0.380285, 0.202328, 0.580392)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.00679421, 0.00602761, 0, 0.6)
+shadow_size = 10
+anti_aliasing_size = 10.0
+
+[sub_resource type="Animation" id="Animation_v5hol"]
+resource_name = "blur"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 0.801, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/MarginContainer/PanelContainer:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/MarginContainer/PanelContainer:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/MarginContainer/PanelContainer:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/MarginContainer/PanelContainer:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="Animation" id="Animation_ymx3k"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/MarginContainer/PanelContainer:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/MarginContainer/PanelContainer:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/MarginContainer/PanelContainer:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/MarginContainer/PanelContainer:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pcfav"]
+_data = {
+"RESET": SubResource("Animation_ymx3k"),
+"blur": SubResource("Animation_v5hol")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hmsga"]
 radius = 101.796
@@ -16,17 +160,27 @@ radius = 68.4921
 
 [node name="Node2D" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_3krxl")
 
-[node name="Control" type="Control" parent="."]
+[node name="back" type="Control" parent="."]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_7mf6p")
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="back"]
+material = SubResource("ShaderMaterial_5uoim")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="back"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,7 +194,8 @@ grow_vertical = 2
 texture = ExtResource("1_m6g6d")
 expand_mode = 1
 
-[node name="back" type="TextureButton" parent="Control"]
+[node name="back" type="TextureButton" parent="back"]
+process_mode = 3
 layout_mode = 0
 offset_left = 20.0
 offset_top = 22.0
@@ -49,7 +204,7 @@ offset_bottom = 534.0
 scale = Vector2(0.125, 0.125)
 texture_normal = ExtResource("3_y4csm")
 
-[node name="TextureRect2" type="TextureRect" parent="Control"]
+[node name="TextureRect2" type="TextureRect" parent="back"]
 layout_mode = 0
 offset_left = 485.0
 offset_top = 359.0
@@ -58,7 +213,7 @@ offset_bottom = 640.0
 scale = Vector2(0.39, 0.39)
 texture = ExtResource("4_lja62")
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Label" type="Label" parent="back"]
 layout_mode = 0
 offset_left = 140.0
 offset_top = 34.0
@@ -77,6 +232,57 @@ text = "THE GANGES CASE : YOUR LEGAL CHALLENGES"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CanvasLayer" type="CanvasLayer" parent="back"]
+process_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="back/CanvasLayer"]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.53
+offset_top = -79.965
+offset_right = 87.47
+offset_bottom = 47.035
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.19274, 1.22466)
+
+[node name="PanelContainer" type="PanelContainer" parent="back/CanvasLayer/MarginContainer"]
+process_mode = 3
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xas86")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="back/CanvasLayer/MarginContainer/PanelContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="back/CanvasLayer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.682622, 0.984579, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("7_sp0v1")
+theme_override_font_sizes/font_size = 30
+text = "PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="back"]
+libraries = {
+"": SubResource("AnimationLibrary_pcfav")
+}
+
 [node name="malelawyer" parent="." instance=ExtResource("2_gwqim")]
 position = Vector2(-70, 137)
 scale = Vector2(0.79, 0.79)
@@ -93,4 +299,4 @@ scale = Vector2(1.05, 1.05)
 position = Vector2(248.239, 294.122)
 shape = SubResource("CircleShape2D_jatof")
 
-[connection signal="pressed" from="Control/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="back/back" to="back" method="_on_back_pressed"]
