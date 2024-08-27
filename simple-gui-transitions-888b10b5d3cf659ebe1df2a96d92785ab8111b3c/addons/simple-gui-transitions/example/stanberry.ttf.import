@@ -1,0 +1,39 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://ct0m40v1h6h20"
+path="res://.godot/imported/stanberry.ttf-4157fc96b0b485d4e305a577f08b4d84.fontdata"
+
+[deps]
+
+source_file="res://simple-gui-transitions-888b10b5d3cf659ebe1df2a96d92785ab8111b3c/addons/simple-gui-transitions/example/stanberry.ttf"
+dest_files=["res://.godot/imported/stanberry.ttf-4157fc96b0b485d4e305a577f08b4d84.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
+language_support={}
+script_support={}
+opentype_features={}
