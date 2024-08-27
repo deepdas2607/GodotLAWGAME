@@ -35,7 +35,7 @@ to solve the problem
 		"lawyer 1" (lawyer 1): Your Honor, I believe we need both court enforcement and citizen involvement. People must be educated about their duty to protect the Ganges, but the law also needs to be strong.
 		"lawyer 2" (lawyer 2): I agree. We need to balance rights and duties so everyone does their part.
 		Judge (New portrait): This is a fair approach. I will consider a solution that combines legal enforcement with public engagement.
-		narrator: The judge agrees with your approach. The court will enforce laws while also promoting public education. You win the case, and leave the courtroom confident that your balanced argument worked.
+		narrator: The judge agrees with your approach. The court will enforce laws while also promoting public education.You leave the courtroom confident that your balanced argument worked.
 		narrator: YOU WIN !!
 		narrator: The case may be over, but the fight for the environment goes on. What will you do next?
 elif {response} == "B":
@@ -54,7 +54,7 @@ Choose between " A " or " B "
 		"lawyer 2" (lawyer 2): Yes, education can empower people to protect the environment.
 		Judge (New portrait): This is a constructive approach. I will consider ordering a public education program.
 		narrator: The judge agrees with your argument. The government will create a \
-public education program, and the law will be enforced. You win the case and feel satisfied with the \
+public education program, and the law will be enforced and you feel satisfied with the \
 outcome.
 		narrator: YOU WIN !!
 		narrator: The case may be over, but the fight for the environment goes on. What will you do next?

@@ -17,7 +17,7 @@
 "portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"res://assets/icons/poli.png\""
+"image": "\"res://assets/icons/narrator.png\""
 },
 "ignore_char_scale": true,
 "mirror": true,
