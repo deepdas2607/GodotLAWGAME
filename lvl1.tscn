@@ -15,6 +15,7 @@ radius = 101.796
 radius = 68.4921
 
 [node name="Node2D" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_3krxl")
 
 [node name="Control" type="Control" parent="."]
