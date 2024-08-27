@@ -17,10 +17,11 @@
 "portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"res://assets/icons/narrator.png\""
+"image": "\"res://assets/icons/poli.png\""
 },
-"mirror": false,
-"offset": Vector2(0, 0),
+"ignore_char_scale": true,
+"mirror": true,
+"offset": Vector2(-2, 0),
 "scale": 1,
 "scene": ""
 }
