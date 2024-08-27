@@ -10,14 +10,14 @@
 },
 "default_portrait": "lawyer 1",
 "description": "",
-"display_name": "Lawyer 1",
+"display_name": "Samir",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
 "lawyer 1": {
 "export_overrides": {
-"image": "\"res://assets/icons/mellll-removebg-preview-removebg-preview.png\""
+"image": "\"res://assets/icons/croppedlawyer.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
