@@ -1,9 +1,0 @@
-narrator: You are a lawyer defending the environment in a major case about the pollution of the Ganges River.
-narrator: You will be facing off against Priya, a fellow lawyer who believes in balancing the rights of citizens with their duties.
-narrator: The judge is waiting for your arguments.
-narrator:  Make your choices wisely!!
-Judge: Counselors, we are here to decide how to address the pollution of the Ganges River. 
-Judge: Counselor, please begin.
-narrator: It’s your time to speak. How do you want to start your case?
-- Focus on Rights : Article 21
-- Focus on Duties : Article 51A(g)
