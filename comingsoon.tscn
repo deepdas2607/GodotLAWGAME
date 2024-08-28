@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=3 uid="uid://vkm8x3wpyp1d"]
+
+[ext_resource type="Script" path="res://comingsoon.gd" id="1_dn2ft"]
+[ext_resource type="Texture2D" uid="uid://cftkdtwna5pac" path="res://assets/icons/bg.jpg" id="2_8ch73"]
+[ext_resource type="Texture2D" uid="uid://hvylulg6s2r6" path="res://assets/icons/esc.png" id="3_mpi1r"]
+[ext_resource type="Texture2D" uid="uid://bb8cv1p4njno2" path="res://assets/icons/comingsoon-removebg-preview.png" id="4_bkaj6"]
+[ext_resource type="AudioStream" uid="uid://bk3sha7xlbg18" path="res://assets/sound/Lost-and-Found(chosic.com).mp3" id="4_jf026"]
+[ext_resource type="FontFile" uid="uid://bcgwslulf1ky4" path="res://assets/font/LEMONMILK-MediumItalic.otf" id="5_dg4l0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dn2ft")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8ch73")
+expand_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 541.0
+offset_right = -612.0
+offset_bottom = 414.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.165, 0.165)
+texture_normal = ExtResource("3_mpi1r")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TextureRect"]
+stream = ExtResource("4_jf026")
+autoplay = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.875
+offset_top = -135.34
+offset_right = 433.125
+offset_bottom = 232.66
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.725, 0.725)
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="story" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+toggle_mode = true
+texture_normal = ExtResource("4_bkaj6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 356.97
+offset_top = 278.935
+offset_right = 819.97
+offset_bottom = 347.935
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.945, 0.945)
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.665604, 8.0619e-07, 4.33177e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("5_dg4l0")
+theme_override_font_sizes/font_size = 25
+text = "COMING SOON
+PRESS ESC TO EXIT TO MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureRect/TextureButton" to="." method="_on_texture_button_pressed"]

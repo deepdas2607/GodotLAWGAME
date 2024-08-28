@@ -106,17 +106,22 @@ scale = Vector2(0.305, 0.305)
 theme_override_constants/separation = 100
 alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer2"]
+[node name="lvlfour" type="TextureButton" parent="HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("9_w0mxg")
 
-[node name="TextureButton2" type="TextureButton" parent="HBoxContainer2"]
+[node name="lvlfive" type="TextureButton" parent="HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("10_abyhd")
 
-[node name="TextureButton3" type="TextureButton" parent="HBoxContainer2"]
+[node name="lvlsix" type="TextureButton" parent="HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("11_t4sj8")
 
 [connection signal="pressed" from="TextureRect/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/1lvl" to="." method="_on_lvl_pressed"]
+[connection signal="pressed" from="HBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="HBoxContainer2/lvlfour" to="." method="_on_lvlfour_pressed"]
+[connection signal="pressed" from="HBoxContainer2/lvlfive" to="." method="_on_lvlfive_pressed"]
+[connection signal="pressed" from="HBoxContainer2/lvlsix" to="." method="_on_lvlsix_pressed"]

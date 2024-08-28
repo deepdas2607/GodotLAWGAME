@@ -29,7 +29,7 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"lawyergametimeline": "res://lawyergametimeline.dtl"
+"timeline": "res://lawyertimeline.dtl"
 }
 glossary/default_case_sensitive=true
 variables={

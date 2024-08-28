@@ -56,4 +56,4 @@ base_overrides = {
 "global_font": "\"res://assets/font/Roboto-Bold.ttf\""
 }
 layers = Array[ExtResource("1_a7u3v")]([SubResource("Resource_0mvjm"), SubResource("Resource_7hhsy"), SubResource("Resource_16pfv"), SubResource("Resource_iu6g8"), SubResource("Resource_g7uav"), SubResource("Resource_bhadv"), SubResource("Resource_h6aq1")])
-metadata/_latest_layer = -1
+metadata/_latest_layer = 6
